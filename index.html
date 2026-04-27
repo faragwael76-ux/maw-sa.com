@@ -6,147 +6,131 @@
 <title>MAW-SA Trading Company</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #333;
-}
+body {margin:0;font-family:Arial;background:#f4f6f8;color:#333;}
 
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+header {background:#0a3d62;color:white;padding:20px;text-align:center;}
+nav a {color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
 
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
+.hero {background:#0a3d62;color:white;text-align:center;padding:80px 20px;}
 
-.hero {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
+.section {padding:40px 20px;text-align:center;}
 
-.section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.cards {display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
 
 .card {
-    background: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
-input, textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 8px 0;
+.features {display:flex;justify-content:center;flex-wrap:wrap;gap:20px;}
+
+.feature {
+    background:white;
+    padding:20px;
+    width:220px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
+
+input, textarea {width:80%;padding:10px;margin:8px 0;}
 
 button {
-    background: #0a3d62;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+    background:#0a3d62;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
 }
 
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: green;
-    color: white;
-    padding: 12px 15px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    color:white;
+    padding:12px 15px;
+    border-radius:50px;
+    text-decoration:none;
 }
 
-footer {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+footer {background:#0a3d62;color:white;text-align:center;padding:15px;}
 </style>
+
+<script>
+function sendEmail(){
+    let name = document.getElementById("name").value;
+    let company = document.getElementById("company").value;
+    let qty = document.getElementById("qty").value;
+    let msg = document.getElementById("msg").value;
+
+    let subject = "NPK Inquiry from " + name;
+    let body = "Name: " + name +
+               "%0D%0ACompany: " + company +
+               "%0D%0AQuantity: " + qty +
+               "%0D%0AMessage: " + msg;
+
+    window.location.href = "mailto:info@maw-sa.com?subject=" + subject + "&body=" + body;
+}
+</script>
 
 </head>
 
 <body>
 
 <header>
-    <h1>MAW-SA Trading Company</h1>
-    <nav>
-        <a href="#products">Products</a>
-        <a href="#quote">Request Quote</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>MAW-SA Trading Company</h1>
+<nav>
+<a href="#products">Products</a>
+<a href="#why">Why Us</a>
+<a href="#quote">Request Quote</a>
+</nav>
 </header>
 
 <div class="hero">
-    <h2>Premium NPK Fertilizers Supplier</h2>
-    <p>Supplying agriculture solutions across Saudi Arabia</p>
+<h2>Premium NPK Fertilizers Supplier</h2>
+<p>Trusted partner for agricultural supply in Saudi Arabia</p>
 </div>
 
 <section class="section" id="products">
-    <h2>Products</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>NPK 20-20-20</h3>
-        </div>
-        <div class="card">
-            <h3>NPK 15-15-15</h3>
-        </div>
-        <div class="card">
-            <h3>NPK 10-52-10</h3>
-        </div>
-    </div>
+<h2>Our Products</h2>
+<div class="cards">
+<div class="card"><h3>NPK 20-20-20</h3></div>
+<div class="card"><h3>NPK 15-15-15</h3></div>
+<div class="card"><h3>NPK 10-52-10</h3></div>
+</div>
+</section>
+
+<section class="section" id="why">
+<h2>Why Choose Us</h2>
+<div class="features">
+<div class="feature">High Quality NPK</div>
+<div class="feature">Fast Delivery</div>
+<div class="feature">Competitive Prices</div>
+<div class="feature">Exclusive Supply</div>
+</div>
 </section>
 
 <section class="section" id="quote">
-    <h2>Request a Quote</h2>
+<h2>Request a Quote</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name"><br>
-        <input type="text" placeholder="Company Name"><br>
-        <input type="text" placeholder="Required Quantity (tons)"><br>
-        <textarea placeholder="Message"></textarea><br>
-        <button type="button">Send Request</button>
-    </form>
+<input id="name" type="text" placeholder="Your Name"><br>
+<input id="company" type="text" placeholder="Company Name"><br>
+<input id="qty" type="text" placeholder="Quantity (tons)"><br>
+<textarea id="msg" placeholder="Message"></textarea><br>
+
+<button onclick="sendEmail()">Send Request</button>
+
 </section>
 
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: info@maw-sa.com</p>
-</section>
-
-<a class="whatsapp" 
-href="https://wa.me/966XXXXXXXXX" 
-target="_blank">
+<a class="whatsapp" href="https://wa.me/966XXXXXXXXX" target="_blank">
 WhatsApp
 </a>
 
 <footer>
-    <p>© 2026 MAW-SA Trading Company</p>
+<p>© 2026 MAW-SA Trading Company</p>
 </footer>
 
 </body>
