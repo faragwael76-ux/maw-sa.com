@@ -13,20 +13,11 @@ body {
     color: #333;
 }
 
-/* Header */
 header {
     background: #0a3d62;
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav {
-    margin-top: 10px;
 }
 
 nav a {
@@ -36,22 +27,15 @@ nav a {
     font-weight: bold;
 }
 
-/* Hero */
 .hero {
-    background: linear-gradient(rgba(10,61,98,0.8), rgba(10,61,98,0.8)),
-    url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') center/cover;
+    background: #0a3d62;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
-.hero h2 {
-    font-size: 40px;
-}
-
-/* Sections */
 .section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -70,13 +54,38 @@ nav a {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    background: #0a3d62;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 footer {
     background: #0a3d62;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 30px;
 }
 </style>
 
@@ -87,51 +96,57 @@ footer {
 <header>
     <h1>MAW-SA Trading Company</h1>
     <nav>
-        <a href="#about">About</a>
         <a href="#products">Products</a>
+        <a href="#quote">Request Quote</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <div class="hero">
     <h2>Premium NPK Fertilizers Supplier</h2>
-    <p>Supplying high-quality agricultural fertilizers across Saudi Arabia</p>
+    <p>Supplying agriculture solutions across Saudi Arabia</p>
 </div>
 
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>
-        MAW-SA is a trading company specializing in importing and distributing 
-        high-quality NPK fertilizers for farms and agricultural projects in Saudi Arabia.
-    </p>
-</section>
-
 <section class="section" id="products">
-    <h2>Our Products</h2>
+    <h2>Products</h2>
     <div class="cards">
         <div class="card">
             <h3>NPK 20-20-20</h3>
-            <p>Balanced fertilizer for all crops</p>
         </div>
         <div class="card">
             <h3>NPK 15-15-15</h3>
-            <p>General purpose fertilizer</p>
         </div>
         <div class="card">
             <h3>NPK 10-52-10</h3>
-            <p>High phosphorus for root growth</p>
         </div>
     </div>
 </section>
 
-<section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@maw-sa.com</p>
-    <p>Saudi Arabia</p>
+<section class="section" id="quote">
+    <h2>Request a Quote</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="text" placeholder="Company Name"><br>
+        <input type="text" placeholder="Required Quantity (tons)"><br>
+        <textarea placeholder="Message"></textarea><br>
+        <button type="button">Send Request</button>
+    </form>
 </section>
 
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: info@maw-sa.com</p>
+</section>
+
+<a class="whatsapp" 
+href="https://wa.me/966XXXXXXXXX" 
+target="_blank">
+WhatsApp
+</a>
+
 <footer>
-    <p>© 2026 MAW-SA Trading Company. All rights reserved.</p>
+    <p>© 2026 MAW-SA Trading Company</p>
 </footer>
 
 </body>
